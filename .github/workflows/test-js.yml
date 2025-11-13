@@ -1,0 +1,14 @@
+name: Test Docker Action (External Repo)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-docker-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run JS action from external repo
+        uses: i-am-vengatesh/composite-action/.github/actions/js-hello@main
+        with:
+          name: "External Repo User"
